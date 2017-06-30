@@ -11,10 +11,6 @@
 /* ==========================================================================
    Global styles
    ========================================================================== */
-h1, h2, h3, h4, h5, h6, p, .btn, .navbar-nav a, .form-control, .list-inline, small, #pricing {
-  font-family: 'Montserrat', sans-serif;
-}
-
 p, .lead {
 	font-family: 'Raleway', sans-serif;
 }
@@ -154,80 +150,6 @@ a:hover, a:focus {
   transition: all 0.35s ease-in-out;
 }
 
-
-
-
-/*-----------------Margins------------------*/
-.margin-0 {
-    margin-bottom: 0 !important;
-}
-.margin-10 {
-    margin-bottom: 10px !important;
-}
-.margin-15 {
-    margin-bottom: 15px !important;
-}
-.margin-20 {
-    margin-bottom: 20px !important;
-}
-.margin-30 {
-    margin-bottom: 30px !important;
-}
-.margin-40 {
-    margin-bottom: 40px !important;
-}
-.margin-50 {
-    margin-bottom: 50px !important;
-}
-.margin-60 {
-    margin-bottom: 60px !important;
-}
-.margin-70 {
-    margin-bottom: 70px !important;
-}
-.margin-80 {
-    margin-bottom: 80px !important;
-}
-.margin-90 {
-    margin-bottom: 90px !important;
-}
-.margin-100 {
-    margin-bottom: 100px !important;
-}
-
-
-/*-----------------Colors------------------*/
-
-.black {
-  color: #231f20;
-}
-
-.blue {
-  color: #70cbce;
-}
-
-.white {
-  color: #ffffff;
-}
-
-.black-bg {
-  background: #231f20;
-}
-
-.blue-bg {
-  background: #70cbce;
-}
-
-.white-bg {
-  background: #ffffff;
-}
-
-.purple-bg {
-	background: #6d3f96;
-}
-
-
-
 /* ==========================================================================
    Nav Styles
    ========================================================================== */
@@ -288,15 +210,28 @@ a:hover, a:focus {
    Main styles
    ========================================================================== */
 header {
-  background: url(../img/header-bg.jpg) no-repeat center center;
   width: 100%;
   padding: 20px 10px 60px 10px;
   height: 100vh;
   overflow: hidden;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url(../img/skyline.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+}
+
+header:before {
+  content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(to bottom,#82ceff,#fff);
+	opacity: .6;
 }
 
 .header-info {
@@ -373,17 +308,6 @@ header {
 
 .pad-xs {
 	padding: 30px 0px;
-}
-
-
-
-#be-the-first {
-  background: url(../img/be-the-first-bg.jpg) #231f20 no-repeat center center fixed;
-  min-height: 300px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 hr.line {
@@ -482,14 +406,8 @@ footer {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-}
-.pricing-table.active {
-  box-shadow: 0px 0px 12px rgba(41,46,50,0.6); 
-  position: absolute;
-  margin: auto;
-  z-index: 200;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  box-shadow: 0px 5px 10px 5px rgba(41,46,50,0.1);
+  border-radius: 10px;
 }
 
 .pricing-table:hover {
@@ -509,22 +427,20 @@ footer {
   background: #231f20;
   color: #FFFFFF;
   padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .price {
-    background: none repeat scroll 0 0 #231f20;
-    color: #FFFFFF;
-    font-size: 32px;
-    font-weight: bold;
-    padding-bottom: 20px;
-    padding-top: 20px;
+  background: none repeat scroll 0 0 #231f20;
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 
 .pricing-table:hover li.price  {
-  background: #303236;
   -webkit-transition: all 0.85s ease-in-out;
   -moz-transition: all 0.85s ease-in-out;
   -o-transition: all 0.85s ease-in-out;
@@ -570,11 +486,8 @@ footer {
 }
 
 .pricing-container .btn {
-    border-radius: 0;
+  border-radius: 0 0 10px 10px;
 }
-
-
-
 
 /* ==========================================================================
    Form styles
@@ -613,13 +526,92 @@ footer {
 }
 
 
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+/*-----------------Margins------------------*/
+.margin-0 {
+    margin-bottom: 0 !important;
+}
+.margin-10 {
+    margin-bottom: 10px !important;
+}
+.margin-15 {
+    margin-bottom: 15px !important;
+}
+.margin-20 {
+    margin-bottom: 20px !important;
+}
+.margin-30 {
+    margin-bottom: 30px !important;
+}
+.margin-40 {
+    margin-bottom: 40px !important;
+}
+.margin-50 {
+    margin-bottom: 50px !important;
+}
+.margin-60 {
+    margin-bottom: 60px !important;
+}
+.margin-70 {
+    margin-bottom: 70px !important;
+}
+.margin-80 {
+    margin-bottom: 80px !important;
+}
+.margin-90 {
+    margin-bottom: 90px !important;
+}
+.margin-100 {
+    margin-bottom: 100px !important;
+}
+
+
+/*-----------------Colors------------------*/
+
+.black {
+  color: #231f20;
+}
+
+.blue {
+  color: #70cbce;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black-bg {
+  background: #231f20;
+}
+
+.blue-bg {
+  background: #70cbce;
+}
+
+.white-bg {
+  background: #ffffff;
+}
+
+.purple-bg {
+	background: #6d3f96;
+}
+
+.gold-bg {
+  background: #D9A441;
+}
+
+.silver-bg {
+  background: #A8A8A8;
+}
 
 
 /* ==========================================================================
    Mobile styles
    ========================================================================== */
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
 
 .btn-lg {
   font-size: 12.5px;
@@ -637,19 +629,20 @@ footer {
   letter-spacing: 0px;
 }
 
-#be-the-first { 
-      background-attachment: scroll;
-  }
+header {
+  height: 100%;
+}
+
 
 }
 
 
 /* Landscape phone to portrait tablet */
-@media (min-width: 481px) and (max-width: 767px) { 
+@media (min-width: 481px) and (max-width: 767px) {
 
-#be-the-first { 
-      background-attachment: scroll;
-  }
+header {
+  height: 100%;
+}
 
 }
 
@@ -657,10 +650,6 @@ footer {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 991px) {
 
-#be-the-first { 
-      background-attachment: scroll;
-  }
-  
 }
 
 
@@ -669,15 +658,10 @@ footer {
 @media (min-width: 992px) and (max-width: 1199px) {
 
 }
-     
+
 
 
 /* Large screens ----------- */
 @media (min-width: 1200px) and (max-width: 3000px) {
 
-}   
-
-
-
-
-
+}
