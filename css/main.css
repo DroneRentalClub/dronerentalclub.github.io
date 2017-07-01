@@ -3,8 +3,8 @@
    Global styles
    ========================================================================== */
 h1 {
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 30px;
+  line-height: 30px;
   letter-spacing: 3px;
   color: #ffffff;
   font-weight: 700;
@@ -42,6 +42,9 @@ p {
   font-weight: 400;
 }
 
+strong {
+  font-weight: bold;
+}
 
 /*------------------Utilities---------------------*/
 a {
@@ -317,8 +320,7 @@ footer {
 
 .features {
   color: #231f20;
-  font-weight: bold;
-  padding-top: 12px;
+  padding-top: 6px;
   padding-bottom: 15px;
   border-bottom: 1px dotted #E8EAEA;
   background: #ffffff
@@ -328,15 +330,13 @@ footer {
   border-top: 1px dotted #E8EAEA;
 }
 
-.features.last {
-  padding-top: 17px;
-  padding-bottom: 20px;
-}
-
-.features.last a {
-	color: #70cbce;
-	font-size: 14px;
-	letter-spacing: 1px;
+.use-case-list {
+  font-size: 15px;
+  width: 45%;
+  margin: 0 auto;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
 }
 
 .pricing-container .btn {
